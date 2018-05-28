@@ -28,7 +28,7 @@ extern "C" {
 #ifdef WIN32
   #define OPENALPRC_DLL_EXPORT __declspec( dllexport )
 #else
-  #define OPENALPRC_DLL_EXPORT
+  #define OPENALPRC_DLL_EXPORT __attribute__((visibility("default")))
 #endif
 
 typedef void OPENALPR;
